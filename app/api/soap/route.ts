@@ -16,12 +16,20 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "요청 형식이 올바르지 않습니다." }, { status: 400 });
   }
 
-  const result = await createAndSaveSoap({
-    sourceText: body.text,
-    noteId: body.note_id,
-    style: body.style,
-    forceRegenerate: body.force_regenerate === true,
-  });
+  let result;
+  try {
+    result = await createAndSaveSoap({
+      sourceText: body.text,
+      noteId: body.note_id,
+      style: body.style,
+      forceRegenerate: body.force_regenerate === true,
+    });
+  } catch {
+    return NextResponse.json(
+      { error: "서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요." },
+      { status: 500 }
+    );
+  }
 
   if (!result.ok) {
     return NextResponse.json(
