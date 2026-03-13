@@ -5,7 +5,12 @@
       "Bash(cat /mnt/c/madeinmine/NurseNote/app/\\\\\\(app\\\\\\)/soap/SoapPageClient.tsx | wc -l)",
       "Bash(npx tsc:*)",
       "Bash(npm run:*)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(npm show:*)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('next:', p.dependencies.next\\); console.log\\('react:', p.dependencies.react\\); console.log\\('react-dom:', p.dependencies['react-dom']\\);\")",
+      "Bash(npm audit:*)",
+      "Bash(rm -rf /mnt/c/madeinmine/NurseNote/node_modules/next 2>&1; echo \"rm exit:$?\")",
+      "Bash(cmd.exe /c \"rmdir /s /q C:\\\\madeinmine\\\\NurseNote\\\\node_modules\\\\next\" 2>&1; echo \"exit:$?\")"
     ]
   }
 }
