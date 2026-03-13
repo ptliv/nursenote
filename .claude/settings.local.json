@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(cat /mnt/c/madeinmine/NurseNote/app/\\\\\\(app\\\\\\)/soap/SoapPageClient.tsx | wc -l)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(npx next:*)"
+    ]
+  }
+}
